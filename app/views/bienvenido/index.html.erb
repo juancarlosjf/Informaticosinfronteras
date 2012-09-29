@@ -1,0 +1,171 @@
+<div class="hero-unit">
+  <h1>Heading</h1>
+  <p>Tagline</p>
+  <p>
+    <a class="btn btn-primary btn-large">
+      Learn more
+    </a>
+  </p>
+</div>
+<a href="javascript:void(0)" onclick="saluda()">Probando el javascript pincha aqui</a>
+
+<hr>
+
+ <div class="hero-unit metro metro-theme-light" style="height: 400px">
+            <div class="row">
+                <div class="span5">
+                    <div class="metro-sections">
+                        <div class="metro-section" id="metro-scene-1">
+                            <div class="tile bg-color-red">
+                                <div class="tile-icon-large">
+                                    <img src="img/Windows%208.png"/>
+                                </div>
+                                <span class="tile-label">Windows 8 Style</span>
+                            </div>
+                            <div class="tile bg-color-green">
+                                <div class="tile-icon-large">
+                                    <h1 style="color: #fff !important; margin-top: 10px">{less}</h1>
+                                </div>
+                                <span class="tile-label">Juan Carlos Jimenez</span>
+                            </div>
+                            <div class="tile bg-color-blueDark">
+                                <div class="tile-icon-large">
+                                    <h1 style="color: #fff !important; margin-top: 10px">MIT</h1>
+                                </div>
+                                <span class="tile-label">Someone</span>
+                            </div>
+                            <div class="tile bg-color-yellow">
+                                <div class="tile-icon-large">
+                                    <img src="img/octocat.png"/>
+                                </div>
+                                <span class="tile-label">Aqui vamos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <!--<a href='http://www.pledgie.com/campaigns/17725'><img alt='Click here to lend your support to: Metro UI CSS and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/17725.png?skin_name=chrome' border='0' /></a>-->
+                </div>
+                <div class="span5">
+                    <h1>Metro UI CSS</h1>
+                    <h2>Windows 8 Metro</h2>
+                    <br/>
+                    <p class="">
+                        Metro UI CSS - In a previous post I talked about using jQuery and modifying the rails.js file to fit your needs doing deletion. Recently I figured out a much better way to do this. You can install a gem then run a rails generate command which will delete your current javascript files and replace them with the appropriate jQuery files.
+                    </p>
+                    <p>
+                        Browsers: IE 9+, Chrome, Opera, Safari, Firefox
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+<hr>
+
+<div class="content clearfix" id="content">
+            <div class="metro-scroll mouse-normal">
+                <h1>Formularios</h1>
+                <div class="frames" style="width: 1000px;">
+                    <form class="metro-form" style="margin-top: 20px;">
+                        <div class="frame size3">
+                            <div class="metro-form-control" style="width: 300px">
+                                <label>Edit box</label>
+                                <div class="metro-text-box">
+                                    <input type="text" autofocus value="user text" />
+                                    <span class="helper"></span>
+                                </div>
+                            </div>
+
+                            <div class="metro-form-control" style="width: 300px">
+                                <label>Edit box</label>
+                                <div class="metro-text-box">
+                                    <input type="text" value="" placeholder="input text here" />
+                                    <span class="helper"></span>
+                                </div>
+                            </div>
+
+                            <div class="metro-form-control" style="width: 300px">
+                                <label>Edit box</label>
+                                <div class="metro-text-box">
+                                    <input type="text" disabled value="disabled" />
+                                    <span class="helper"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame size4">
+                            <br />
+                            <table style="width: 300px">
+                                <tr>
+                                    <td>
+                                        <div style="margin-bottom: 10px;">
+                                            <label class="metro-radio">
+                                                <input type="radio" name="rb" checked>
+                                                <span>Radio 1</span>
+                                            </label>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            <label class="metro-radio">
+                                                <input type="radio" name="rb">
+                                                <span>Radio 2</span>
+                                            </label>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            <label class="metro-radio">
+                                                <input type="radio" name="rb" disabled>
+                                                <span>Radio 3</span>
+                                            </label>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            <label class="metro-radio">
+                                                <input type="radio" name="rb2" disabled checked>
+                                                <span>Radio 3</span>
+                                            </label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div style="margin-bottom: 10px;">
+                                            <label class="metro-check">
+                                                <input type="checkbox" name="cb1" checked>
+                                                <span>Checkbox 1</span>
+                                            </label>
+                                        </div>
+
+                                        <div style="margin-bottom: 10px;">
+                                            <label class="metro-check">
+                                                <input type="checkbox" name="cb2">
+                                                <span>Checkbox 2</span>
+                                            </label>
+                                        </div>
+
+                                        <div style="margin-bottom: 10px;">
+                                            <label class="metro-check">
+                                                <input type="checkbox" name="cb3" disabled checked>
+                                                <span>Checkbox 3</span>
+                                            </label>
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            <label class="metro-check">
+                                                <input type="checkbox" name="cb3" disabled>
+                                                <span>Checkbox 3</span>
+                                            </label>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+          <script type="text/javascript">
+        $(function(){
+            $("body").metroUI();
+        })
+    </script>
+

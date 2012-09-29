@@ -1,0 +1,778 @@
+ <div id="doc" class="">
+        <div class="push-loader" id="pushStateSpinner"></div>
+        
+        <div class="topbar js-topbar">
+          <div id="banners" class="js-banners">
+          </div>
+          <div class="global-nav" data-section-term="top_nav">
+            <div class="global-nav-inner">
+              <div class="container">
+                
+        
+                <ul class="nav js-global-actions">
+                  <li class="home" data-global-action="t1home">
+                      <a class="nav-logo-link" href="/" data-nav="front">
+                        <i class="bird-topbar-blue"></i>
+                      </a>
+                  </li>
+                </ul>
+                <ul class="nav secondary-nav session-dropdown" id="session">
+                  <li class="dropdown js-session">
+                    <a class="dropdown-toggle dropdown-signin" id="signin-link" href="#" data-nav="login">
+                      <small>¿Tienes cuenta?</small> Iniciar sesión <span class="caret"></span>
+                    </a>
+                    <a class="dropdown-signup" id="signup-link" href="https://twitter.com/signup?context=login" data-nav="signup">
+                      <small>¿Eres nuevo en Twitter?</small><span class="emphasize"> Únete Hoy &raquo;</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-form" id="signin-dropdown">
+                      <li class="dropdown-caret right">
+                        <span class="caret-outer"></span>
+                        <span class="caret-inner"></span>
+                      </li>
+                      <li>
+                        <form action="https://twitter.com/sessions" class="js-signin signin" method="post">
+                  <fieldset class="textbox">
+    <label class="username js-username">
+      <span>Nombre de usuario o correo electrónico</span>
+      <input class="js-username-field email-input" type="text" name="session[username_or_email]" autocomplete="on">
+    </label>
+    <label class="password js-password">
+      <span>Contraseña</span>
+      <input class="js-password-field" type="password" value="" name="session[password]">
+    </label>
+  </fieldset>
+  <fieldset class="subchck">
+    <label class="remember">
+      <input type="checkbox" value="1" name="remember_me" >
+      <span>Recordar mis datos</span>
+    </label>
+    <button type="submit" class="btn submit">Iniciar sesión</button>
+  </fieldset>
+  
+  <input type="hidden" name="scribe_log">
+  <input type="hidden" name="redirect_after_login" value="/">
+  <input type="hidden" value="030b8733a097ab8df9fb95922bd0f7992c74cb9f" name="authenticity_token"/>
+  <div class="divider"></div>
+                  <p>
+                    <a class="forgot" href="/account/resend_password">¿Olvidaste tu contraseña?</a><br />
+                    <a class="mobile has-sms" href="/account/complete">¿Ya usas Twitter por SMS?</a>
+                  </p>
+                </form>
+              </li>
+                    </ul>
+                  </li>
+                </ul>
+        
+                <ul class="nav secondary-nav language-dropdown">
+                  <li class="dropdown js-language-dropdown">
+                    <a class="dropdown-toggle" href="javascript:;">
+                      <small>Idioma:</small>
+                      <span class="js-current-language">Español</span>
+                      <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-caret right">
+                        <span class="caret-outer"></span>
+                        <span class="caret-inner"></span>
+                      </li>
+                        <li><a href="?lang=id" data-lang-code="id" title="Indonesio" class="js-language-link">Bahasa Indonesia</a></li>
+                        <li><a href="?lang=msa" data-lang-code="msa" title="Malayo" class="js-language-link">Bahasa Melayu</a></li>
+                        <li><a href="?lang=da" data-lang-code="da" title="Danés" class="js-language-link">Dansk</a></li>
+                        <li><a href="?lang=de" data-lang-code="de" title="Alemán" class="js-language-link">Deutsch</a></li>
+                        <li><a href="?lang=en" data-lang-code="en" title="Inglés" class="js-language-link">English</a></li>
+                        <li><a href="?lang=eu" data-lang-code="eu" title="Basque" class="js-language-link">Euskara</a></li>
+                        <li><a href="?lang=fil" data-lang-code="fil" title="Filipino" class="js-language-link">Filipino</a></li>
+                        <li><a href="?lang=it" data-lang-code="it" title="Italiano" class="js-language-link">Italiano</a></li>
+                        <li><a href="?lang=hu" data-lang-code="hu" title="Húngaro" class="js-language-link">Magyar</a></li>
+                        <li><a href="?lang=nl" data-lang-code="nl" title="Holandés" class="js-language-link">Nederlands</a></li>
+                        <li><a href="?lang=no" data-lang-code="no" title="Noruego" class="js-language-link">Norsk</a></li>
+                        <li><a href="?lang=pl" data-lang-code="pl" title="Polaco" class="js-language-link">Polski</a></li>
+                        <li><a href="?lang=pt" data-lang-code="pt" title="Portugués" class="js-language-link">Português</a></li>
+                        <li><a href="?lang=fi" data-lang-code="fi" title="Finés" class="js-language-link">Suomi</a></li>
+                        <li><a href="?lang=sv" data-lang-code="sv" title="Sueco" class="js-language-link">Svenska</a></li>
+                        <li><a href="?lang=tr" data-lang-code="tr" title="Turco" class="js-language-link">Türkçe</a></li>
+                        <li><a href="?lang=ca" data-lang-code="ca" title="Catalan" class="js-language-link">català</a></li>
+                        <li><a href="?lang=fr" data-lang-code="fr" title="Francés" class="js-language-link">français</a></li>
+                        <li><a href="?lang=cs" data-lang-code="cs" title="Czech" class="js-language-link">Čeština</a></li>
+                        <li><a href="?lang=el" data-lang-code="el" title="Griego" class="js-language-link">Ελληνικά</a></li>
+                        <li><a href="?lang=ru" data-lang-code="ru" title="Ruso" class="js-language-link">Русский</a></li>
+                        <li><a href="?lang=uk" data-lang-code="uk" title="Ukrainian" class="js-language-link">Українська мова</a></li>
+                        <li><a href="?lang=he" data-lang-code="he" title="Hebreo" class="js-language-link">עִבְרִית</a></li>
+                        <li><a href="?lang=ur" data-lang-code="ur" title="Urdu" class="js-language-link">اردو</a></li>
+                        <li><a href="?lang=ar" data-lang-code="ar" title="Árabe" class="js-language-link">العربية</a></li>
+                        <li><a href="?lang=fa" data-lang-code="fa" title="Persa" class="js-language-link">فارسی</a></li>
+                        <li><a href="?lang=hi" data-lang-code="hi" title="Hindi" class="js-language-link">हिन्दी</a></li>
+                        <li><a href="?lang=th" data-lang-code="th" title="Tailandés" class="js-language-link">ภาษาไทย</a></li>
+                        <li><a href="?lang=ja" data-lang-code="ja" title="Japonés" class="js-language-link">日本語</a></li>
+                        <li><a href="?lang=zh-cn" data-lang-code="zh-cn" title="Chino Simplificado" class="js-language-link">简体中文</a></li>
+                        <li><a href="?lang=zh-tw" data-lang-code="zh-tw" title="Chino Tradicional" class="js-language-link">繁體中文</a></li>
+                        <li><a href="?lang=ko" data-lang-code="ko" title="Coreano" class="js-language-link">한국어</a></li>
+                    </ul>
+                    <div class="js-front-language">
+                      <form action="/sessions/change_locale" class="language" method="POST">
+                        <input type="hidden" name="lang">
+                        <input type="hidden" name="redirect">
+                        <input type="hidden" name="authenticity_token" value="030b8733a097ab8df9fb95922bd0f7992c74cb9f">
+                      </form>
+                    </div>
+                  </li>
+                </ul>
+                <div class="pull-right">
+                  <form class="form-search js-search-form " action="/search" id="global-nav-search">
+            <label class="hidden-elements" for="search-query">Buscar</label>
+            <input class="search-input" type="text" id="search-query" placeholder="Buscar" name="q" autocomplete="off" spellcheck="false">
+            <span class="search-icon js-search-action">
+              <i class="nav-search" tabindex="0"></i>
+            </span>
+            <input disabled="disabled" class="search-input search-hinting-input" type="text" id="search-query-hint" autocomplete="off" spellcheck="false">
+              <div class="dropdown-menu typeahead">
+      <div class="dropdown-caret">
+        <div class="caret-outer"></div>
+        <div class="caret-inner"></div>
+      </div>
+      <div class="dropdown-inner js-typeahead-results">
+        <ul class="typeahead-items saved-searches-list">
+      
+      <li class="saved-search-item search-item"><a class="js-nav" href="" data-search-query="" data-query-source="" data-ds="saved_search"><i class="generic-search"></i></a></li>
+    </ul>    <ul class="typeahead-items topics-list">
+      
+      <li class="topics-item search-item"><a class="js-nav" href="" data-search-query="" data-query-source="typeahead_click" data-ds="topics"><i class="generic-search"></i></a></li>
+    </ul>    <div class="typeahead-accounts js-typeahead-accounts">
+      <ul class="typeahead-items">
+        
+        <li data-user-id="" data-user-screenname="" data-remote="true" data-score="" class="typeahead-item typeahead-account-item js-selectable">
+          
+          <a class="js-nav" data-query-source="typeahead_click" data-search-query="" data-ds="account">
+            <img width="24" height="24" class="avatar size24">
+            <span class="fullname"></span>
+            <i class="verified hidden"></i>
+            <span class="username"><s>@</s><b></b></span>
+          </a>
+        </li>
+        <li class="js-selectable typeahead-accounts-shortcut js-shortcut"><a class="js-nav" href="" data-search-query="" data-query-source="typeahead_click" data-shortcut="true" data-ds="account_search"></a></li>
+      </ul>
+    </div>  </div>
+    </div></form>
+        </div>
+        
+                
+                <a id="close-all-button" class="close-all-tweets js-close-all-tweets" href="#" title="Cerrar todos los Tweets abiertos">
+                  <i class="nav-breaker"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="page-outer">
+          <div id="page-container" class=" wrapper-front white">
+            <div class="front-container front-container-full-signup  " id="front-container">
+  <noscript>
+    <div class="front-warning">
+      <h3>Twitter.com hace mucho uso de JavaScript</h3>
+      <p>Si no puedes habilitarlo en las preferencias de tu navegador, podrías obtener una mejor experiencia en nuestro <a href="http://m.twitter.com">sitio móvil</a>.</p>
+    </div>
+  </noscript>
+
+  <div class="front-warning" id="front-no-cookies-warn">
+    <h3>Twitter.com hace uso intensivo de las cookies del navegador</h3>
+    <p>Por favor, activa las cookies en las preferencias de tu navegador antes de iniciar sesión.</p>
+  </div>
+
+  <div class="front-bg">
+    <img class="front-image" src="http://a0.twimg.com/a/1348858768/t1/img/front_page/city-balcony@2x.jpg">
+  </div>
+
+  <div class="front-card">
+    <div class="front-welcome">
+      <div class="front-welcome-text">
+        <h1>Bienvenido a Twitter.</h1>
+        <p>Descubre lo que está pasando ahora, con las personas y grupos que te interesan.</p>
+      </div>
+
+    </div>
+
+
+    <div class="front-signin js-front-signin">
+      <form action="https://twitter.com/sessions" class="signin" method="post">
+        <div class="placeholding-input username">
+          <input type="text" id="signin-email" class="text-input email-input" name="session[username_or_email]" title="Nombre de usuario o correo electrónico" autocomplete="on" tabindex=1>
+          <label for="signin-email" class="placeholder">Nombre de usuario o correo electrónico</label>
+        </div>
+    
+        <table class="flex-table password-signin">
+          <tbody>
+          <tr>
+            <td class="flex-table-primary">
+              <div class="placeholding-input password flex-table-form">
+                <input type="password" id="signin-password" class="text-input flex-table-input" name="session[password]" title="Contraseña" tabindex=2>
+                <label for="signin-password" class="placeholder">Contraseña</label>
+              </div>
+            </td>
+            <td class="flex-table-secondary">
+              <button type="submit" class="submit btn primary-btn flex-table-btn js-submit" tabindex=4>
+                
+                Iniciar sesión
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+    
+        <div class="remember-forgot">
+          <label class="remember">
+            <input type="checkbox" value="1" name="remember_me" tabindex=3>
+            <span>Recordar mis datos</span>
+          </label>
+          <span class="separator">&middot;</span>
+          <a class="forgot" href="/account/resend_password">¿Olvidaste tu contraseña?</a>
+        </div>
+    
+    
+        <input type="hidden" name="scribe_log">
+        <input type="hidden" name="redirect_after_login" value="/">
+        <input type="hidden" value="030b8733a097ab8df9fb95922bd0f7992c74cb9f" name="authenticity_token">
+      </form>
+    </div>
+      <div class="front-signup js-front-signup">
+        <h2><strong>¿Eres nuevo en Twitter?</strong> Regístrate</h2>
+      
+        <form action="https://twitter.com/signup" class="signup" method="post">
+          <div class="placeholding-input">
+            <input type="text" id="signup-user-name" class="text-input" autocomplete="off" name="user[name]" maxlength="20">
+            <label for="signup-user-name" class="placeholder">Nombre completo</label>
+          </div>
+          <div class="placeholding-input">
+            <input type="text" id="signup-user-email" class="text-input email-input" autocomplete="off" name="user[email]">
+            <label for="signup-user-email" class="placeholder">Correo electrónico</label>
+          </div>
+          <div class="placeholding-input">
+            <input type="password" id="signup-user-password" class="text-input" name="user[user_password]">
+            <label for="signup-user-password" class="placeholder">Contraseña</label>
+          </div>
+      
+          <input type="hidden" value="front" name="context">
+          <input type="hidden" value="030b8733a097ab8df9fb95922bd0f7992c74cb9f" name="authenticity_token">
+          <button type="submit" class="btn signup-btn">
+            Regístrate en Twitter
+          </button>
+        </form>
+      </div>
+
+  </div>
+
+  <div class="footer inline-list">
+    <ul>
+      <li><a href="/about">Sobre nosotros</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="//support.twitter.com">Ayuda</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="http://blog.es.twitter.com">Blog</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="http://status.twitter.com">Estado</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="/jobs">Empleos</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="/tos">Términos</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="/privacy">Privacidad</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="//business.twitter.com/es/advertise/start">Publicidad</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="//business.twitter.com/index_es.html">Negocios</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="http://media.twitter.com">Media</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="//dev.twitter.com">Desarrolladores</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="/about/resources">Recursos</a><span class="dot divider"> &middot;</span></li>
+      <li><a href="/i/directory/profiles">Directorio</a></a><span class="dot divider"> &middot;</span></li>
+      <li><span class="copyright">&copy; 2012 Twitter</span></li>
+    </ul>
+  </div>
+
+
+</div>
+
+          </div>
+        </div>
+    </div>
+      <div class="alert-messages hidden" id="message-drawer">
+          <div class="message ">
+      <div class="message-inside">
+        <span class="message-text"></span><a class="dismiss" href="#">&times;</a>
+      </div>
+    </div></div>
+    
+    <div class="modal-overlay"></div>
+    
+    <div class="hidden-elements">
+      <div id="flash-preload"></div>
+      <iframe class="tweet-post-iframe" name="tweet-post-iframe"></iframe>
+    
+    </div>
+    
+    
+    
+    <div id="goto-user-dialog" class="modal-container">
+  <div class="modal modal-small draggable">
+    <div class="modal-content">
+      <button type="button" class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+
+      <div class="modal-header">
+        <h3 class="modal-title">Ir al perfil de un usuario</h3>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-inner">
+          <form class="goto-user-form">
+            <input class="input-block username-input" type="text" placeholder="Start typing a name to jump to a profile">
+            <ul class="dropdown-menu autocomplete-results">
+              <li class="dropdown-link dropdown-account template-row autocomplete-item">
+                <img width="24" height="24" class="avatar size24">
+                <strong class="fullname"></strong>
+                <span class="pretty-link"><s>@</s><b class="username"></b></span>
+              </li>
+            </ul>          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <div id="retweet-tweet-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal draggable">
+      <div class="modal-content">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+  
+        <div class="modal-header">
+          <h3 class="modal-title">¿Retwittear a tus seguidores?</h3>
+        </div>
+  
+        <div class="modal-body modal-tweet"></div>
+  
+        <div class="modal-footer">
+          <button class="btn cancel-action">Cancelar</button>
+          <button class="btn primary-btn retweet-action">Retwittear</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="delete-tweet-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal draggable">
+      <div class="modal-content">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+  
+        <div class="modal-header">
+          <h3 class="modal-title">¿Estás seguro de que quieres eliminar este Tweet?</h3>
+        </div>
+  
+        <div class="modal-body modal-tweet"></div>
+  
+        <div class="modal-footer">
+          <button class="btn cancel-action">Cancelar</button>
+          <button class="btn primary-btn delete-action">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+<div id="keyboard-shortcut-dialog" class="modal-container">
+  <div class="close-modal-background-target"></div>
+  <div class="modal modal-large draggable">
+    <div class="modal-content">
+      <button type="button" class="modal-btn modal-close js-dimiss"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+
+      
+      <div class="modal-header">
+        <h3 class="modal-title">Teclas rápidas</h3>
+      </div>
+
+      
+      <div class="modal-body">
+
+        <div class="keyboard-shortcuts clearfix" id="keyboard-shortcut-menu">
+
+          <table class="modal-table">
+            <tbody>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">Enter</b>
+                </td>
+                <td class="shortcut-label">Abrir detalles del Tweet</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">G</b> <b class="sc-key">F</b>
+                </td>
+                <td class="shortcut-label">Ir a usuario...</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">?</b>
+                </td>
+                <td class="shortcut-label">Este menú</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">J</b>
+                </td>
+                <td class="shortcut-label">Siguiente Tweet</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">K</b>
+                </td>
+                <td class="shortcut-label">Tweet Anterior</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">Space</b>
+                </td>
+                <td class="shortcut-label">Página abajo</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">/</b>
+                </td>
+                <td class="shortcut-label">Buscar</td>
+              </tr>
+              <tr>
+                <td class="shortcut">
+                  <b class="sc-key">.</b>
+                </td>
+                <td class="shortcut-label">Cargar nuevos Tweets</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+      
+      
+    
+        <div id="geo-disabled-dropdown">
+          <ul class="dropdown-menu" tabindex="-1">
+        <li class="dropdown-caret">
+          <span class="caret-outer"></span>
+          <span class="caret-inner"></span>
+        </li>
+        <li class="geo-not-enabled-yet">
+          <h2>Añade una ubicación a tus Tweets</h2>
+          <p>
+            Cuando twitteas desde un lugar, Twitter guarda esa ubicación.&#32;
+            Puedes cambiar la opción de geo-ubicación antes de mandar un tweet y claro, siempre tienes la opción de borrar el historial de tus ubicaciones.
+            <a href="http://support.twitter.com/forums/26810/entries/78525" target="_blank">Más</a>
+          </p>
+          <div>
+            <button type="button" class="geo-turn-on btn primary-btn">Activar geo-ubicación</button>
+            <button type="button" class="geo-not-now btn-link">Por ahora no</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+      <div id="geo-enabled-dropdown">
+        <ul class="dropdown-menu" tabindex="-1">
+      <li class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+      </li>
+      <li class="geo-query-location">
+        <input type="text" autocomplete="off" placeholder="Buscar por barrio o ciudad">
+        <i class="generic-search"></i>
+      </li>
+      <li class="geo-dropdown-status"></li>
+      <li class="dropdown-link geo-turn-off-item geo-focusable">
+        <i class="close"></i>Desactivar ubicación
+      </li>
+    </ul>
+  </div>
+    
+    
+      <div id="profile_popup" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal modal-small draggable">
+      <div class="modal-content clearfix">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+        <div class="modal-header">
+          <h3 class="modal-title">Resumen del perfil</h3>
+        </div>
+  
+        <div class="modal-body profile-modal">
+  
+        </div>
+  
+        <div class="loading">
+          <img src="http://a0.twimg.com/a/1348858768/images/bigger_spinner.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="list-membership-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal modal-small draggable">
+      <div class="modal-content">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+        <div class="modal-header">
+          <h3 class="modal-title">Tus listas</h3>
+        </div>
+        <div class="modal-body">
+          <div class="list-membership-content"></div>
+          <span class="spinner lists-spinner" title="Cargando&hellip;"></span>
+        </div>
+      </div>
+    </div>
+  </div>  <div id="list-operations-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal modal-medium draggable">
+      <div class="modal-content">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+        <div class="modal-header">
+          <h3 class="modal-title">Crear nueva lista</h3>
+        </div>
+        <div class="modal-body">
+          
+        <div class="list-editor">
+          <div class="field">
+            <label for="list-name">Nombre de la lista</label>
+            <input type="text" class="text" name="name" value="" />
+          </div>
+          <div class="field" style="display:none">
+            <label for="list-link">Enlace de la lista</label>
+            <span></span>
+          </div>
+          <hr/>
+        
+          <div class="field">
+            <label for="description">Descripción</label>
+            <textarea name="description"></textarea>
+            <span class="help-text">Menos de 100 caracteres, opcional</span>
+          </div>
+          <hr/>
+        
+          <div class="field">
+            <label for="mode">Privacidad</label>
+            <div class="options">
+              <label for="list-public-radio">
+                <input class="radio" type="radio" name="mode" id="list-public-radio" value="public" checked="checked"  />
+                <b>Pública</b> &middot; Cualquiera puede seguir esta lista
+              </label>
+              <label for="list-private-radio">
+                <input class="radio" type="radio" name="mode" id="list-private-radio" value="private"  />
+                <b>Privada</b> &middot; Solamente tú podrás ver esta lista
+              </label>
+            </div>
+          </div>
+          <hr/>
+        
+          <div class="list-editor-save">
+            <div class="button btn btn-primary update-list-button" data-list-id="">Guardar lista</div>
+          </div>
+        
+        </div>      </div>
+      </div>
+    </div>
+  </div>
+      <div id="activity-popup-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal draggable">
+      <div class="modal-content clearfix">
+        <button type="button" class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+  
+        <div class="modal-header">
+          <h3 class="modal-title"></h3>
+        </div>
+  
+        <div class="modal-body">
+          <div class="activity-tweet clearfix"></div>
+          <div class="loading">
+            <img src="http://a0.twimg.com/a/1348858768/images/bigger_spinner.gif">
+          </div>
+          <div class="activity-content clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="confirm_dialog" class="modal-container">
+  <div class="close-modal-background-target"></div>
+  <div class="modal draggable">
+    <div class="modal-content">
+      <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+      <div class="modal-header">
+        <h3 class="modal-title"></h3>
+      </div>
+      <div class="modal-body">
+        <p class="modal-body-text"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" id="confirm_dialog_cancel_button"></button>
+        <button id="confirm_dialog_submit_button" class="btn primary-btn modal-submit"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+    <div id="signin-or-signup-dialog">
+      <div id="signin-or-signup" class="modal-container">
+        <div class="close-modal-background-target"></div>
+        <div class="modal modal-medium draggable">
+          <div class="modal-content">
+            <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+            <div class="modal-header">
+              <h3 class="modal-title modal-long-title signup-only">Únete a Twitter y sigue a @</h3>
+              <h3 class="modal-title not-signup-only">Iniciar sesión en Twitter</h3>
+            </div>
+            <div class="modal-body signup-only">
+              <form action="https://twitter.com/signup" class="clearfix signup" method="post">
+              <div class="holding name">
+                <input type="text" autocomplete="off" name="user[name]" maxlength="20">
+                <span class="holder">Nombre completo</span>
+              </div>
+              <div class="holding email">
+                <input class="email-input" type="text" autocomplete="off" name="user[email]">
+                <span class="holder">Correo electrónico</span>
+              </div>
+              <div class="holding password">
+                <input type="password" name="user[user_password]">
+                <span class="holder">Contraseña</span>
+              </div>
+              <input type="hidden" value="front" name="context">
+              <input type="hidden" value="030b8733a097ab8df9fb95922bd0f7992c74cb9f" name="authenticity_token"/>
+              <input name="follows" type="hidden" value="">
+              <input type="submit" class="btn signup-btn js-submit js-signup-btn" value="Regístrate">
+            </form>
+          </div>
+            <div class="modal-body not-signup-only">
+              <form action="https://twitter.com/sessions" class="signin" method="post">
+              <fieldset>
+  
+    <div class="clearfix holding">
+      <span class="username js-username holder">Nombre de usuario o correo electrónico</span>
+      <input class="js-username-field email-input" type="text" name="session[username_or_email]" autocomplete="on" value="" tabindex=1>
+      <p class="help-text-inline">Forgot your <a href="/account/resend_password" title="If you remember your password, try logging in with your email" tabindex="-1">username</a>?</p>
+    </div>
+  
+    <div class="clearfix holding">
+      <span class="password holder">Contraseña</span>
+      <input class="js-password-field" type="password" name="session[password]" tabindex=2>
+      <p class="help-text-inline">¿Olvidaste tu <a href="/account/resend_password" tabindex="-1">contraseña</a>?</p>
+    </div>
+  
+    <input type="hidden" value="030b8733a097ab8df9fb95922bd0f7992c74cb9f" name="authenticity_token"/>
+  
+  </fieldset>
+  <div class="clearfix">
+  
+    <input type="hidden" name="scribe_log">
+    <input type="hidden" name="redirect_after_login" value="/">
+    <input type="hidden" value="030b8733a097ab8df9fb95922bd0f7992c74cb9f" name="authenticity_token"/>
+    <button type="submit" class="submit btn primary-btn" tabindex=4>Iniciar sesión</button>
+  
+    <fieldset class="subchck">
+      <label class="remember">
+        <input type="checkbox" value="1" name="remember_me"  tabindex=3>
+        Recordar mis datos
+      </label>
+    </fieldset>
+  
+  </div>
+  <div class="divider"></div>
+              <p>
+                <a class="forgot" href="/account/resend_password">¿Olvidaste tu contraseña?</a><br />
+                <a class="mobile has-sms" href="/account/complete">¿Ya usas Twitter por SMS?</a>
+              </p>
+            </form>
+            <div class="signup">
+                <h2>¿No estás en Twitter? Regístrate, ponte al día con las cosas que te importan, y recibe actualizaciones inmediatas.</h2>
+                <form action="https://twitter.com/signup" class="signup" method="get">
+                  <input type="hidden" name="context" value="front">
+                  <input type="hidden" value="030b8733a097ab8df9fb95922bd0f7992c74cb9f" name="authenticity_token"/>
+                <button class="btn promotional signup-btn" type="submit">Regístrate &raquo;</button>
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sms-codes-dialog" class="modal-container">
+    <div class="close-modal-background-target"></div>
+    <div class="modal modal-medium draggable">
+      <div class="modal-content">
+        <button class="modal-btn modal-close"><i class="close-medium"><span class="hidden-elements">Cerrar</span></i></button>
+        <div class="modal-header">
+          <h3 class="modal-title">Códigos cortos</h3>
+        </div>
+        <div class="modal-body">
+          
+        <table id="sms_codes" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <th>País</th>
+              <th>Código</th>
+              <th>Para clientes de</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Estados Unidos</td>
+              <td>40404</td>
+              <td>(cualquiera)</td>
+            </tr>
+            <tr>
+              <td>Canadá</td>
+              <td>21212</td>
+              <td>(cualquiera)</td>
+            </tr>
+            <tr>
+              <td>Reino Unido</td>
+              <td>86444</td>
+              <td>Vodafone, Orange, 3, O2</td>
+            </tr>
+            <tr>
+              <td>Brasil</td>
+              <td>40404</td>
+              <td>Nextel, TIM</td>
+            </tr>
+            <tr>
+              <td>Haití</td>
+              <td>40404</td>
+              <td>Digicel, Voila</td>
+            </tr>
+            <tr>
+              <td>Irlanda</td>
+              <td>51210</td>
+              <td>Vodafone, O2</td>
+            </tr>
+            <tr>
+              <td>India</td>
+              <td>53000</td>
+              <td>Bharti Airtel, Videocon, Reliance</td>
+            </tr>
+            <tr>
+              <td>Indonesia</td>
+              <td>89887</td>
+              <td>AXIS, 3, Telkomsel, Indosat, XL Axiata</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Italia</td>
+              <td>4880804</td>
+              <td>Wind</td>
+            </tr>
+            <tr>
+              <td>3424486444</td>
+              <td>Vodafone</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">
+                &raquo; <a target="_blank" href="http://support.twitter.com/articles/14226-how-to-find-your-twitter-short-code-or-long-code">Ver códigos cortos de SMS para otros países</a>
+              </td>
+            </tr>
+          </tfoot>
+        </table>      </div>
+      </div>
+    </div>
+  </div>
