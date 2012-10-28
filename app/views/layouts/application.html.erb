@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Appmobile</title>
+  <title>AppIsf</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div>
+			<div class="span10">
+				<%= yield %>
+			</div>
 
-<%= yield %>
-
+</div>
 </body>
 </html>

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Appmobile::Application.load_tasks
+AppIsf::Application.load_tasks

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AppIsf</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application","login" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+            <div class="navbar navbar-inverse navbar-fixed-top">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="#">InformáticosSF</a>
+                  <div class="nav-collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="#">Inicio</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Conecta<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Por usuarios</a></li>
+							<li><a href="#">Pro grupos</a></li>
+							<li><a href="#">Reservas</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Descubre<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Prueba</a></li>
+						</ul>
+					</li>
+
+					    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Listas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li class="nav-header">Nav header</li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+
+
+                  
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input type="text" class="search-query span2" placeholder="Buscar">
+                    </form>
+                    <ul class="nav pull-right">
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notificaciones<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a class="theme-switch-default" href="#">Default</a></li>
+            </ul>
+          </li>
+
+<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mensajes<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a class="theme-switch-default" href="#">Default</a></li>
+            </ul>
+          </li>
+
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Yo <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div><!-- /navbar -->
+
+<div class="container-fluid">
+
+	<div class="row-fluid">
+			<div class="span2"></div>
+      
+      <div class="span8">
+
+			<div class="span5">
+				<div class="member-box round-all"> 
+        <a>	<%=	image_tag("michael.jpg", :class => "member-box-avatar",:height => "50px", :width => "50px") %></a>
+        <span>
+            <strong>Administrator</strong> | <a>John Doe</a> | <span class="member-box-links"><a>Salir</a></span>
+        </span>
+      </div>     
+				<div class="sidebar-nav member-box round-all">
+				
+					
+<div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading btn-info-light">
+                                    <a style="padding-left:25px;" class="accordion-toggle btn btn-info dashboard" data-parent="#accordion2" href="index.html" data-original-title="">
+                                        <i class="icon-user icon-white "></i>
+                                        Dashboard
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle elements btn open btn-info" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" data-original-title="" style="padding-left: 15px;">
+                                        <i class="icon-align-center icon-white"></i>
+                                        Cuenta
+                                        <span class="caret"></span>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="accordion-body content collapse" style="height: 0px;">
+                                    <div class="accordion-inner">
+                                        <ul class="unstyled">
+                                           <li><a href="cuenta" data-original-title="">Mi cuenta <span class="badge badge-important">89</span></a> </li>
+
+                                            <li><a href="perfil" data-original-title="">Perfil <span class="badge badge-important">89</span></a> </li>
+                                            <li><a class="current" href="password" data-original-title="">Renovar contraseña <span class="badge badge-info">56</span></a></li> 
+                                            <li><a href="chart.html" data-original-title="">Mis seguidores <span class="badge badge-important">2</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle btn open btn-info" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" data-original-title="" style="padding-left: 15px;">
+                                        <i class="icon-resize-vertical icon-white"></i>
+                                        Publicación
+                                        <span class="caret"></span>
+                                    </a>
+                                </div>
+                                <div style="height: 0px;" id="collapseTwo" class="accordion-body content collapse">
+                                    <div class="accordion-inner">
+                                        <ul class="unstyled">
+                                            <li><a href="#" data-original-title="">Dejanos una idea</a></li>
+                                            <li><a class="current" href="#" data-original-title="">Administración de publicación</a></li> 
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle btn open btn-info" data-toggle="collapse" data-parent="#accordion2" href="#collapse3" data-original-title="" style="padding-left: 15px;">
+                                        <i class="icon-resize-full icon-white"></i>
+                                       Mensajes
+                                        <span class="caret"></span>
+                                    </a>
+                                </div>
+                                <div style="height: 0px;" id="collapse3" class="accordion-body content collapse">
+                                    <div class="accordion-inner">
+                                        <ul class="unstyled">
+                                            <li><a href="#" data-original-title="">Mensajes enviados</a></li>
+                                            <li><a class="current" href="#" data-original-title="">Recibidos</a></li> 
+                                            <li><a href="#" data-original-title="">	Comentarios sobre tu post</a></li>
+                                                                </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle btn open btn-info" data-toggle="collapse" data-parent="#accordion2" href="#collapse4" data-original-title="" style="padding-left: 15px;">
+                                        <i class="icon-wrench icon-white"></i>
+Administración de proyectos                                        <span class="caret"></span>
+                                    </a>
+                                </div>
+                                <div style="height: auto;" id="collapse4" class="accordion-body content in collapse">
+                                    <div class="accordion-inner">
+                                        <ul class="unstyled">
+                                            <li><a class="current" href="#" data-original-title=""><i class="icon-plus"></i> Crear nuevo proyecto</a></li>
+                                            <li><a class="current" href="#" data-original-title=""><i class="icon-indent-left"></i> Configuración</a></li> 
+                                            <li><a class="current" href="#" data-original-title=""><i class="icon-random"></i> Desarrollo</a></li> 
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                     </div>
+				</div><!--/.well -->
+				<div class="member-box round-all"> 
+					© 2012 Informáticos sin fronteras Sobre nosotros Ayuda Términos Privacidad Blog Estado Publicidad Desarrolladores Empleos
+      </div>     
+			</div>
+			<div class="span7 member-box round-all">
+				<%= yield %>
+			</div>
+        </div>
+			<div class="span1"></div>
+
+
+	</div>
+	<footer>
+		© 2012 Informáticos sin fronteras <br />
+		De América Latina para todo el mundo<br />
+		correo@informaticosf.com 
+	</footer>	
+</div>
+
+</body>
+</html>

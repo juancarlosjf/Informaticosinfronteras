@@ -1,4 +1,54 @@
-Appmobile::Application.routes.draw do
+AppIsf::Application.routes.draw do
+  get "user/cuenta"
+
+  get "user/listas"
+
+  get "pages/eserver"
+
+  get "pages/eweb"
+
+  get "pages/wconstruccion"
+
+  get "pages/wmantenimiento"
+
+  get "user/index"
+
+  get "user/perfil"
+
+  get "user/notificacion"
+
+  get "user/password"
+
+  get "user/mensajes"
+
+  get "user/seguidores"
+
+  get "user/login"
+
+  get "user/comentarios"
+
+  get "user/publicacion"
+
+  get "user/publicacionad"
+
+  get "prueba/index"
+
+  get "prueba/contacto"
+
+  get "prueba/nosotros"
+
+  get "saludo/index"
+
+  get "bienvenido/index"
+  
+  get "contenidos/index"
+
+  get "contenidos/videotutoriales"
+
+  get "proyectos/index"
+  get "proyectos/contacto"
+
+  get "home/index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +98,11 @@ Appmobile::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'welcome#index'
+   match 'saludo', :to=>"saludo#index"
+   match 'contenidos', :to=>"contenidos#index"
+   match 'proyectos', :to=>"proyectos#index"
+      match 'home', :to=>"home#index"
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AppIsf</title>
+  <%= stylesheet_link_tag    "application","mooncake.min","metro", :media => "all" %>
+  <%= javascript_include_tag "application","login","less-1.3.0.min","metroui","prettify" %>
+  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "jquery_ujs" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+            <div class="navbar navbar-inverse navbar-fixed-top">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="#">InformáticosSF</a>
+                  <div class="nav-collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="#">Inicio</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Conecta<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Por usuarios</a></li>
+							<li><a href="#">Pro grupos</a></li>
+							<li><a href="#">Reservas</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Descubre<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Prueba</a></li>
+						</ul>
+					</li>
+
+					    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Listas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li class="nav-header">Nav header</li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+
+
+                  
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input type="text" class="search-query span2" placeholder="Buscar">
+                    </form>
+                    <ul class="nav pull-right">
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notificaciones<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a class="theme-switch-default" href="#">Default</a></li>
+            </ul>
+          </li>
+
+<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mensajes<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a class="theme-switch-default" href="#">Default</a></li>
+            </ul>
+          </li>
+
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Yo <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div><!-- /navbar -->
+
+<div class="container-fluid">
+
+	<div class="row-fluid">
+			<div class="span2"></div>
+      
+      <div class="span8">
+
+			<div class="span5">
+
+
+        <div class="member-box round-all"> 
+        <a>	<%=	image_tag("michael.jpg", :class => "member-box-avatar",:height => "50px", :width => "50px") %></a>
+        <span>
+            <strong>Administrator</strong> | <a>John Doe</a> | <span class="member-box-links"><a>Salir</a></span>
+        </span>
+  <div class="js-mini-profile-stats-container">
+             <div class="span4"> <a class="js-nav" href="/juancarlos_jf" data-element-term="tweet_stats" data-nav='profile'> <strong>63</strong> Ideas</a></div>
+             <div class="span4"> <a class="js-nav" href="/following" data-element-term="following_stats" data-nav='following'> <strong>99</strong> Siguiendo Ideas</a></div>
+             <div class="span4"> <a class="js-nav" href="/followers" data-element-term="follower_stats" data-nav='followers'> <strong>24</strong> Seguidores</a> </div>
+           
+              </div>
+    
+
+
+<div class="home-tweet-box tweet-box component tweet-user">
+              <form class="tweet-form condensed" method="post" target="tweet-post-iframe" action="https://upload.twitter.com/i/tweet/create_with_media.iframe" enctype="multipart/form-data">
+
+            <div class="tweet-content">
+          
+              <label class="hidden-elements" for="tweet-box-mini-home-profile">Está es mi idea!</label>
+              <textarea class="tweet-box" id="tweet-box-mini-home-profile" dir="ltr" style=""></textarea><textarea class="tweet-box rtl-tweet-box" name="status" dir="ltr" style="display: none; "></textarea>
+          
+              <ul class="dropdown-menu autocomplete-results" style="display: none; ">
+      <li class="dropdown-link dropdown-account template-row autocomplete-item">
+        <img width="24" height="24" class="avatar size24">
+        <strong class="fullname"></strong>
+        <span class="pretty-link"><s>@</s><b class="username"></b></span>
+      </li>
+    </ul>
+              
+             
+            </div>
+          
+
+           
+          </form>
+      </div>
+
+</div>     
+<div class="member-box round-all"> 
+      <div class="flex-module">
+    
+        <div class="flex-module-header">
+                A quien seguir
+
+
+<div class="sapn12">
+<div class="span2"> <%= image_tag("michael.jpg", :class => "member-box-avatar",:height => "50px", :width => "50px") %>    </div>
+<div class="span9"> Lorem Ipsum is simply dummy text of the printing k.of the printing k.</div>
+</div>
+
+
+
+            <small>&middot; <a class="js-refresh-suggestions" href="#">Actualizar</a></small>
+            <small class="view-all">&middot; <a class="js-view-all-link" href="/who_to_follow/suggestions" data-element-term="view_all_link">Ver todos</a></small>
+
+        </div>
+    
+        <div class="js-recommended-followers dashboard-user-recommendations flex-module-inner" data-section-id="wtf">
+        </div>
+    
+          <div class="flex-module-footer">
+            <a href="/who_to_follow/interests" class="js-interests-link" data-element-term="interests_link">Explorar categorías</a> &middot; <a href="/who_to_follow/import" class="js-find-friends-link" data-element-term="import_link">Buscar amigos</a>
+          </div>
+    
+      </div>
+
+</div>     
+
+<div class="member-box round-all"> 
+      Tendencias <a>Cambiar</a> </br>
+      #sistemas expertos </br>
+TI</br>
+#Manuales de CSS</br>
+#50ThingsIWantToDoBeforeIDie</br>
+Perú</br>
+Auspiciadores</br>
+Barcelona</br>
+Jquery</br>
+Milagros</br>
+App_municipal</br>
+      </div>     
+
+				<div class="member-box round-all"> 
+					© 2012 Informáticos sin fronteras Sobre nosotros Ayuda Términos Privacidad Blog Estado Publicidad Desarrolladores Empleos
+      </div>     
+			</div>
+			<div class="span7 member-box round-all">
+				<%= yield %>
+			</div>
+        </div>
+			<div class="span1"></div>
+
+
+	</div>
+	<footer>
+		© 2012 Informáticos sin fronteras <br />
+		De América Latina para todo el mundo<br />
+		correo@informaticosf.com 
+	</footer>	
+</div>
+
+</body>
+</html>

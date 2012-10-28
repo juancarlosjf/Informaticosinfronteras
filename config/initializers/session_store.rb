@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-Appmobile::Application.config.session_store :cookie_store, key: '_appmobile_session'
+AppIsf::Application.config.session_store :cookie_store, key: '_app_isf_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# Appmobile::Application.config.session_store :active_record_store
+# AppIsf::Application.config.session_store :active_record_store

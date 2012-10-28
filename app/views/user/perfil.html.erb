@@ -1,0 +1,184 @@
+<div class="content-main">
+          <div class="content-header">
+            <div class="header-inner">
+              <h2>Perfil</h2>
+              <p class="subheader">Esta información aparece en tu perfil público, resultados de búsqueda y más allá.</p>
+            </div>
+          </div>
+          <div class="content-inner no-stream-end">
+            <form id="profile-form" class="form-horizontal"  enctype="multipart/form-data" method="POST" action="https://twitter.com/settings/profile">
+              <div id="settings-alert-box" class="alert" style="display: none;">
+                <i id="settings-alert-close" class="close"></i>
+              </div>
+              <input type="hidden" name="authenticity_token" value="4266bf401e048710758ba1d804104fe6f9ae99ca">
+              <input type="hidden" value="PUT" name="_method">
+              <fieldset id="profile-image-controls" class="control-group">
+                <label class="control-label" for="profile_image_uploaded_data">Foto</label>
+                <div class="controls">
+                  <div class="uploader-avatar clearfix">
+                    <img class="avatar size73" id="avatar_preview" src="https://twimg0-a.akamaihd.net/profile_images/2380608461/qmkdzdgizoycny0mfdvu_bigger.jpeg">
+                      <div class="uploader-tools">
+                          <div id="duckface-uploader" style="display: none;">
+                              <div id="choose-photo" class="dropdown">
+                  <button class="btn choose-photo-button" id="profile_image_upload" type="button">
+                    Cambiar foto
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-caret">
+                      <span class="caret-outer"></span>
+                      <span class="caret-inner"></span>
+                    </li>
+                    <li id="photo-choose-existing" class="photo-choose-existing pretty-link dropdown-link">
+                      Escoger foto existente
+                      <div class="photo-selector">
+        <button class="btn" type="button" disabled="true">
+            Cambiar foto
+          </button>
+        <span class="photo-file-name">No se ha seleccionado ningún archivo</span>
+        <div class="image-selector">
+          <input type="hidden" name="media_file_name" class="file-name">
+          <input type="hidden" name="media_data_empty" class="file-data">
+          <input type="file" name="media_empty" class="file-input">
+          <div class="swf-container"></div>
+        </div>
+      </div>
+    </li>
+                    <li id="photo-choose-webcam" class="pretty-link dropdown-link " style="display:none">Tomar foto</li>
+                    <li id="photo-delete-image" class="pretty-link dropdown-link " >Eliminar foto</li>
+                  </ul>
+                  <div class="webcam-detect swf-container"></div>
+                  <img src="https://twimg0-a.akamaihd.net/a/1349296073/images/spinner_center_72.gif" class="preview-spinner" style="display: none">
+                </div>
+              <p>Esta foto te identifica en Twitter y aparece con tus Tweets.</p>
+                            <p>¿Necesitas ayuda? <a href="https://support.twitter.com/articles/127871" target="_blank" id="profile_image_help">Aprende más</a>.</p>
+                          </div>
+                        <div style="display: none;" id="legacy-uploader">
+                          <div class="photo-selector">
+              <button class="btn" type="button" disabled="true">
+                  Elige archivo
+                </button>
+              <span class="photo-file-name">No se ha seleccionado ningún archivo</span>
+              <div class="image-selector">
+                <input type="hidden" name="media_file_name" class="file-name">
+                <input type="hidden" name="media_data_empty" class="file-data">
+                <input type="file" name="media_empty" class="file-input">
+                <div class="swf-container"></div>
+              </div>
+            </div>
+            <p>
+                            Tamaño máximo 700k. JPG, GIF, PNG.<br>
+                            ¿Necesitas ayuda para subir una imagen de perfil? <a href="https://support.twitter.com/articles/127871" target="_blank" id="profile_image_help">Aprende más</a>.<br>
+                              <a href="#" id="delete-image" class="delete-image btn-link">Borrar esta foto</a>
+                          </p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <hr>
+              <fieldset class="control-group">
+                <label class="control-label" for="user_name">Nombre</label>
+                <div class="controls">
+                  <input id="user_name" maxlength="20" type="text" name="user[name]" value="Juan Carlos Jimenez ">
+                  <p>Introduce tu nombre real para que la gente que conoces te reconozca.</p>
+                </div>
+              </fieldset>
+              <fieldset class="control-group">
+                <label class="control-label" for="user_location">Ubicación</label>
+                <div class="controls">
+                  <input id="user_location" name="user[location]" type="text" value="Tacna">
+                  <p>¿En qué parte del mundo estás?</p>
+                </div>
+              </fieldset>
+              <fieldset id="user_web_fieldset" class="control-group">
+                <label class="control-label" for="user_url">Sitio web</label>
+                <div class="controls">
+                  <input id="user_url" name="user[url]" rel="http://" size="30" type="text" value="http://">
+                  <p>¿Tienes una página web o un blog? Pon la dirección aquí.</p>
+                  <p> <a href="/goodies" title="¡Pon Twitter en tu sitio web!" id="tfw_link">También puedes añadir Twitter a tu sitio web aquí.</a></p>
+                </div>
+              </fieldset>
+              <fieldset class="control-group">
+                <label class="control-label" for="user_description">Biografía</label>
+                <div class="controls">
+                  <textarea class="input-xlarge" id="user_description" maxlength="160" name="user[description]">Web developer and expert systems, glad of the beautiful things of life, lover of technology and knowledge and naturally curious</textarea>
+                  <p>Acerca de ti en menos de <strong>160</strong> caracteres.</p>
+                </div>
+              </fieldset>
+              
+              <hr>
+              
+              <div id="fb-button" class="fb-button-or-iframe">
+                <label class="control-label" for="">Facebook</label>
+                <div class="controls">
+                  <iframe id="fb-iframe" scrolling="no" frameborder="0" style="display: none;"></iframe>
+                  <p><a href="#" id="fb-anchor" class="btn" style="display: none;"><span>Publica tus Tweets en Facebook</span></a></p>
+                  <p>¿Tienes algún problema? <a href="https://support.twitter.com/articles/31113" target="_blank">Aprende más</a>.</p>
+                </div>
+              </div>
+                            <hr>
+              <div class="form-actions">
+                <button id="settings_save" class="btn primary-btn" type="submit">Guardar cambios</button>
+              </div>            </form>
+
+              <div id="profile_image_upload_dialog" class="modal-container">
+                <div id="avatar-guid" name="super-secret-div" style="display:none"></div>
+                <div class="close-modal-background-target"></div>
+                <div class="modal draggable profile-avatar-modal" style="top: 50px!important">
+                  <div class="modal-content">
+                    <button class="modal-btn modal-close"><i class="close-medium"></i></button>
+                    <div class="modal-header">
+                      <h3 class="modal-title">Subir una imagen de perfil</h3>
+                    </div>
+                    <div class="modal-body">
+                      <div class="alert profile-image-alert message" style="display: none;"><div><span id="profile-image-alert-message"></span><a class="dismiss" href="#">&times;</a></div></div>
+                      <div class="upload-frame" id="image-upload-webcam" style="display: none">
+                        <div id="webcam-container"></div>
+                        <canvas id="webcam-canvas" height="240" width="320" style="display:none"></canvas>
+                      </div>
+                      <div class="upload-frame clearfix" id="image-upload-crop" style="display: none">
+                        <img src="https://twimg0-a.akamaihd.net/a/1349296073/images/bigger_spinner.gif" id="crop-spinner" style="display: none">
+                        <div class="crop-zone cropper-avatar-size" id="crop-zone">
+                          <div class="cropper-mask" id="cropper-mask">
+                            <div id="cropper-overlay"></div>
+                            <img id="crop-image" class="crop-image">
+                          </div>
+                          <div class="cropper-slider-outer">
+                            <i class="image-gray"></i>
+                            <div class="cropper-slider" id="cropper-slider"></div>
+                            <i class="image-gray-large"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="display: none;">
+                        <canvas id="drawsurface"></canvas>
+                      </div>
+                      <div class="upload-frame clearfix" id="image-upload-spinner"></div>
+                    </div>
+              
+                    <div class="modal-footer">
+                      <a class="btn" id="profile-image-cancel">Cancelar</a>
+                      <a class="btn" id="profile-image-previous" style="display: none">Anterior</a>
+                      <a class="btn primary-btn disabled" id="profile-image-capture-webcam" style="display: none">Tomar foto</a>
+                      <a class="btn primary-btn" id="profile-image-save" style="display: none">Guardar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                        </div>
+        </div>
+
+          </div>
+        </div>
+      <script>
+        if(window.ttft){window.ttft.recordMilestone('page','settings');
+        window.ttft.recordMilestone('client_record_time',new Date().getTime())}
+      </script>
+    </div>
+      <div class="alert-messages hidden" id="message-drawer">
+          <div class="message ">
+      <div class="message-inside">
+        <span class="message-text"></span><a class="dismiss" href="#">&times;</a>
+      </div>
+    </div></div>

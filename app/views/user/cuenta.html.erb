@@ -1,0 +1,415 @@
+<div class="content-header">
+    <div class="header-inner">
+      <h2>Cuenta</h2>
+      <p class="subheader">Cambia tu configuración de cuenta básica, idioma, privacidad de tweets y ubicación.</p>
+    </div>
+  </div>
+  <div class="content-inner no-stream-end">
+    <form id="account-form" class="form-horizontal requires-password" method="POST" action="https://twitter.com/settings/accounts/update">
+      <div id="settings-alert-box" class="alert" style="display: none;">
+        <i id="settings-alert-close" class="close"></i>
+      </div>
+      <input type="hidden" value="PUT" name="_method">
+      <input type="hidden" name="authenticity_token" value="cfbb9d4c1abc544a5469e2288252783ba4b4e0a2">
+      <fieldset id="username_fieldset" class="control-group">
+        <label for="user_screen_name" class="control-label">Nombre de usuario</label>
+        <div class="controls">
+          <p id="username_notification" class="notification"></p>
+          <input id="user_screen_name" maxlength="15" name="user[screen_name]" type="text" value="juancarlos_jf">
+          <p class="notification">https://informaticosf.com/<span id="username_path">juancarlos_jf</span></p>
+        </div>
+      </fieldset>
+
+
+      <fieldset id="email_fieldset" class="control-group">
+        <label for="user_email" class="control-label">Correo electrónico</label>
+        <div class="controls">
+          <p id="email_notification" class="notification"></p>
+          <input id="user_email" class="email-input" name="user[email]" type="text" value="carlos.jf.1681@gmail.com">
+          <p>El correo electrónico no será mostrado públicamente <a href="https://support.twitter.com/articles/15356" target="_blank">Aprender más</a>.</p>
+          <label class="checkbox">
+            <input id="user_discoverable_by_email" name="user[discoverable_by_email]" type="checkbox" value="1" checked>
+            Permitir que otros me encuentren por correo electrónico
+          </label>
+          <input type="hidden" value="0" name="user[discoverable_by_email]">
+        </div>
+      </fieldset>
+
+      <hr>
+
+      <fieldset class="control-group">
+        <label for="user_lang" class="control-label">Idioma</label>
+        <div class="controls">
+          <select id="user_lang" name="user[lang]">
+             <option>Selecciona un idioma...</option>
+               <option value="de" >Alemán - Deutsch</option>
+               <option value="eu" >Basque - Euskara (beta)</option>
+               <option value="ca" >Catalan - català (beta)</option>
+               <option value="zh-cn" >Chino Simplificado - 简体中文</option>
+               <option value="zh-tw" >Chino Tradicional - 繁體中文</option>
+               <option value="ko" >Coreano - 한국어</option>
+               <option value="cs" >Czech - Čeština (beta)</option>
+               <option value="da" >Danés - Dansk</option>
+               <option value="es" selected>Español</option>
+               <option value="fil" >Filipino - Filipino</option>
+               <option value="fi" >Finés - Suomi</option>
+               <option value="fr" >Francés - français</option>
+               <option value="el" >Griego - Ελληνικά (beta)</option>
+               <option value="he" >Hebreo - עִבְרִית</option>
+               <option value="hi" >Hindi - हिन्दी</option>
+               <option value="nl" >Holandés - Nederlands</option>
+               <option value="hu" >Húngaro - Magyar</option>
+               <option value="id" >Indonesio - Bahasa Indonesia</option>
+               <option value="en" >Inglés - English</option>
+               <option value="it" >Italiano - Italiano</option>
+               <option value="ja" >Japonés - 日本語</option>
+               <option value="msa" >Malayo - Bahasa Melayu</option>
+               <option value="no" >Noruego - Norsk</option>
+               <option value="fa" >Persa - فارسی</option>
+               <option value="pl" >Polaco - Polski</option>
+               <option value="pt" >Portugués - Português</option>
+               <option value="ru" >Ruso - Русский</option>
+               <option value="sv" >Sueco - Svenska</option>
+               <option value="th" >Tailandés - ภาษาไทย</option>
+               <option value="tr" >Turco - Türkçe</option>
+               <option value="uk" >Ukrainian - Українська мова (beta)</option>
+               <option value="ur" >Urdu - اردو</option>
+               <option value="ar" >Árabe - العربية</option>
+                       </select>
+          <p>¿Estás interesado en ayudar a traducir Informáticosf? Visita el <a href="http://translate.twttr.com">Centro de Traducción</a>.</p>
+        </div>
+      </fieldset>
+      <fieldset class="control-group">
+        <label for="user_time_zone"  class="control-label">Zona horaria</label>
+        <div class="controls">
+          <select id="user_time_zone" name="user[time_zone]">
+              <option data-offset="-36000" value="Hawaii" >(GMT-10:00) Hawaii</option>
+              <option data-offset="-32400" value="Alaska" >(GMT-09:00) Alaska</option>
+              <option data-offset="-28800" value="Pacific Time (US &amp; Canada)" >(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+              <option data-offset="-25200" value="Arizona" >(GMT-07:00) Arizona</option>
+              <option data-offset="-25200" value="Mountain Time (US &amp; Canada)" >(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+              <option data-offset="-21600" value="Central Time (US &amp; Canada)" >(GMT-06:00) Central Time (US &amp; Canada)</option>
+              <option data-offset="-18000" value="Eastern Time (US &amp; Canada)" >(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+              <option data-offset="-18000" value="Indiana (East)" >(GMT-05:00) Indiana (East)</option>
+              <option data-offset="" value="" >-------------</option>
+              <option data-offset="-39600" value="International Date Line West" >(GMT-11:00) International Date Line West</option>
+              <option data-offset="-39600" value="Midway Island" >(GMT-11:00) Midway Island</option>
+              <option data-offset="-39600" value="Samoa" >(GMT-11:00) Samoa</option>
+              <option data-offset="-28800" value="Tijuana" >(GMT-08:00) Tijuana</option>
+              <option data-offset="-25200" value="Chihuahua" >(GMT-07:00) Chihuahua</option>
+              <option data-offset="-25200" value="Mazatlan" >(GMT-07:00) Mazatlan</option>
+              <option data-offset="-21600" value="Central America" >(GMT-06:00) Central America</option>
+              <option data-offset="-21600" value="Guadalajara" >(GMT-06:00) Guadalajara</option>
+              <option data-offset="-21600" value="Mexico City" >(GMT-06:00) Mexico City</option>
+              <option data-offset="-21600" value="Monterrey" >(GMT-06:00) Monterrey</option>
+              <option data-offset="-21600" value="Saskatchewan" >(GMT-06:00) Saskatchewan</option>
+              <option data-offset="-18000" value="Bogota" >(GMT-05:00) Bogota</option>
+              <option data-offset="-18000" value="Lima" selected>(GMT-05:00) Lima</option>
+              <option data-offset="-18000" value="Quito" >(GMT-05:00) Quito</option>
+              <option data-offset="-16200" value="Caracas" >(GMT-04:30) Caracas</option>
+              <option data-offset="-14400" value="Atlantic Time (Canada)" >(GMT-04:00) Atlantic Time (Canada)</option>
+              <option data-offset="-14400" value="La Paz" >(GMT-04:00) La Paz</option>
+              <option data-offset="-14400" value="Santiago" >(GMT-04:00) Santiago</option>
+              <option data-offset="-12600" value="Newfoundland" >(GMT-03:30) Newfoundland</option>
+              <option data-offset="-10800" value="Brasilia" >(GMT-03:00) Brasilia</option>
+              <option data-offset="-10800" value="Buenos Aires" >(GMT-03:00) Buenos Aires</option>
+              <option data-offset="-10800" value="Georgetown" >(GMT-03:00) Georgetown</option>
+              <option data-offset="-10800" value="Greenland" >(GMT-03:00) Greenland</option>
+              <option data-offset="-7200" value="Mid-Atlantic" >(GMT-02:00) Mid-Atlantic</option>
+              <option data-offset="-3600" value="Azores" >(GMT-01:00) Azores</option>
+              <option data-offset="-3600" value="Cape Verde Is." >(GMT-01:00) Cape Verde Is.</option>
+              <option data-offset="0" value="Casablanca" >(GMT) Casablanca</option>
+              <option data-offset="0" value="Dublin" >(GMT) Dublin</option>
+              <option data-offset="0" value="Edinburgh" >(GMT) Edinburgh</option>
+              <option data-offset="0" value="Lisbon" >(GMT) Lisbon</option>
+              <option data-offset="0" value="London" >(GMT) London</option>
+              <option data-offset="0" value="Monrovia" >(GMT) Monrovia</option>
+              <option data-offset="3600" value="Amsterdam" >(GMT+01:00) Amsterdam</option>
+              <option data-offset="3600" value="Belgrade" >(GMT+01:00) Belgrade</option>
+              <option data-offset="3600" value="Berlin" >(GMT+01:00) Berlin</option>
+              <option data-offset="3600" value="Bern" >(GMT+01:00) Bern</option>
+              <option data-offset="3600" value="Bratislava" >(GMT+01:00) Bratislava</option>
+              <option data-offset="3600" value="Brussels" >(GMT+01:00) Brussels</option>
+              <option data-offset="3600" value="Budapest" >(GMT+01:00) Budapest</option>
+              <option data-offset="3600" value="Copenhagen" >(GMT+01:00) Copenhagen</option>
+              <option data-offset="3600" value="Ljubljana" >(GMT+01:00) Ljubljana</option>
+              <option data-offset="3600" value="Madrid" >(GMT+01:00) Madrid</option>
+              <option data-offset="3600" value="Paris" >(GMT+01:00) Paris</option>
+              <option data-offset="3600" value="Prague" >(GMT+01:00) Prague</option>
+              <option data-offset="3600" value="Rome" >(GMT+01:00) Rome</option>
+              <option data-offset="3600" value="Sarajevo" >(GMT+01:00) Sarajevo</option>
+              <option data-offset="3600" value="Skopje" >(GMT+01:00) Skopje</option>
+              <option data-offset="3600" value="Stockholm" >(GMT+01:00) Stockholm</option>
+              <option data-offset="3600" value="Vienna" >(GMT+01:00) Vienna</option>
+              <option data-offset="3600" value="Warsaw" >(GMT+01:00) Warsaw</option>
+              <option data-offset="3600" value="West Central Africa" >(GMT+01:00) West Central Africa</option>
+              <option data-offset="3600" value="Zagreb" >(GMT+01:00) Zagreb</option>
+              <option data-offset="7200" value="Athens" >(GMT+02:00) Athens</option>
+              <option data-offset="7200" value="Bucharest" >(GMT+02:00) Bucharest</option>
+              <option data-offset="7200" value="Cairo" >(GMT+02:00) Cairo</option>
+              <option data-offset="7200" value="Harare" >(GMT+02:00) Harare</option>
+              <option data-offset="7200" value="Helsinki" >(GMT+02:00) Helsinki</option>
+              <option data-offset="7200" value="Istanbul" >(GMT+02:00) Istanbul</option>
+              <option data-offset="7200" value="Jerusalem" >(GMT+02:00) Jerusalem</option>
+              <option data-offset="7200" value="Kyiv" >(GMT+02:00) Kyiv</option>
+              <option data-offset="7200" value="Pretoria" >(GMT+02:00) Pretoria</option>
+              <option data-offset="7200" value="Riga" >(GMT+02:00) Riga</option>
+              <option data-offset="7200" value="Sofia" >(GMT+02:00) Sofia</option>
+              <option data-offset="7200" value="Tallinn" >(GMT+02:00) Tallinn</option>
+              <option data-offset="7200" value="Vilnius" >(GMT+02:00) Vilnius</option>
+              <option data-offset="10800" value="Baghdad" >(GMT+03:00) Baghdad</option>
+              <option data-offset="10800" value="Kuwait" >(GMT+03:00) Kuwait</option>
+              <option data-offset="10800" value="Minsk" >(GMT+03:00) Minsk</option>
+              <option data-offset="10800" value="Nairobi" >(GMT+03:00) Nairobi</option>
+              <option data-offset="10800" value="Riyadh" >(GMT+03:00) Riyadh</option>
+              <option data-offset="12600" value="Tehran" >(GMT+03:30) Tehran</option>
+              <option data-offset="14400" value="Abu Dhabi" >(GMT+04:00) Abu Dhabi</option>
+              <option data-offset="14400" value="Baku" >(GMT+04:00) Baku</option>
+              <option data-offset="14400" value="Moscow" >(GMT+04:00) Moscow</option>
+              <option data-offset="14400" value="Muscat" >(GMT+04:00) Muscat</option>
+              <option data-offset="14400" value="St. Petersburg" >(GMT+04:00) St. Petersburg</option>
+              <option data-offset="14400" value="Tbilisi" >(GMT+04:00) Tbilisi</option>
+              <option data-offset="14400" value="Volgograd" >(GMT+04:00) Volgograd</option>
+              <option data-offset="14400" value="Yerevan" >(GMT+04:00) Yerevan</option>
+              <option data-offset="16200" value="Kabul" >(GMT+04:30) Kabul</option>
+              <option data-offset="18000" value="Islamabad" >(GMT+05:00) Islamabad</option>
+              <option data-offset="18000" value="Karachi" >(GMT+05:00) Karachi</option>
+              <option data-offset="18000" value="Tashkent" >(GMT+05:00) Tashkent</option>
+              <option data-offset="19800" value="Chennai" >(GMT+05:30) Chennai</option>
+              <option data-offset="19800" value="Kolkata" >(GMT+05:30) Kolkata</option>
+              <option data-offset="19800" value="Mumbai" >(GMT+05:30) Mumbai</option>
+              <option data-offset="19800" value="New Delhi" >(GMT+05:30) New Delhi</option>
+              <option data-offset="20700" value="Kathmandu" >(GMT+05:45) Kathmandu</option>
+              <option data-offset="21600" value="Almaty" >(GMT+06:00) Almaty</option>
+              <option data-offset="21600" value="Astana" >(GMT+06:00) Astana</option>
+              <option data-offset="21600" value="Dhaka" >(GMT+06:00) Dhaka</option>
+              <option data-offset="21600" value="Ekaterinburg" >(GMT+06:00) Ekaterinburg</option>
+              <option data-offset="21600" value="Sri Jayawardenepura" >(GMT+06:00) Sri Jayawardenepura</option>
+              <option data-offset="23400" value="Rangoon" >(GMT+06:30) Rangoon</option>
+              <option data-offset="25200" value="Bangkok" >(GMT+07:00) Bangkok</option>
+              <option data-offset="25200" value="Hanoi" >(GMT+07:00) Hanoi</option>
+              <option data-offset="25200" value="Jakarta" >(GMT+07:00) Jakarta</option>
+              <option data-offset="25200" value="Novosibirsk" >(GMT+07:00) Novosibirsk</option>
+              <option data-offset="28800" value="Beijing" >(GMT+08:00) Beijing</option>
+              <option data-offset="28800" value="Chongqing" >(GMT+08:00) Chongqing</option>
+              <option data-offset="28800" value="Hong Kong" >(GMT+08:00) Hong Kong</option>
+              <option data-offset="28800" value="Krasnoyarsk" >(GMT+08:00) Krasnoyarsk</option>
+              <option data-offset="28800" value="Kuala Lumpur" >(GMT+08:00) Kuala Lumpur</option>
+              <option data-offset="28800" value="Perth" >(GMT+08:00) Perth</option>
+              <option data-offset="28800" value="Singapore" >(GMT+08:00) Singapore</option>
+              <option data-offset="28800" value="Taipei" >(GMT+08:00) Taipei</option>
+              <option data-offset="28800" value="Ulaan Bataar" >(GMT+08:00) Ulaan Bataar</option>
+              <option data-offset="28800" value="Urumqi" >(GMT+08:00) Urumqi</option>
+              <option data-offset="32400" value="Irkutsk" >(GMT+09:00) Irkutsk</option>
+              <option data-offset="32400" value="Osaka" >(GMT+09:00) Osaka</option>
+              <option data-offset="32400" value="Sapporo" >(GMT+09:00) Sapporo</option>
+              <option data-offset="32400" value="Seoul" >(GMT+09:00) Seoul</option>
+              <option data-offset="32400" value="Tokyo" >(GMT+09:00) Tokyo</option>
+              <option data-offset="34200" value="Adelaide" >(GMT+09:30) Adelaide</option>
+              <option data-offset="34200" value="Darwin" >(GMT+09:30) Darwin</option>
+              <option data-offset="36000" value="Brisbane" >(GMT+10:00) Brisbane</option>
+              <option data-offset="36000" value="Canberra" >(GMT+10:00) Canberra</option>
+              <option data-offset="36000" value="Guam" >(GMT+10:00) Guam</option>
+              <option data-offset="36000" value="Hobart" >(GMT+10:00) Hobart</option>
+              <option data-offset="36000" value="Melbourne" >(GMT+10:00) Melbourne</option>
+              <option data-offset="36000" value="Port Moresby" >(GMT+10:00) Port Moresby</option>
+              <option data-offset="36000" value="Sydney" >(GMT+10:00) Sydney</option>
+              <option data-offset="36000" value="Yakutsk" >(GMT+10:00) Yakutsk</option>
+              <option data-offset="39600" value="New Caledonia" >(GMT+11:00) New Caledonia</option>
+              <option data-offset="39600" value="Solomon Is." >(GMT+11:00) Solomon Is.</option>
+              <option data-offset="39600" value="Vladivostok" >(GMT+11:00) Vladivostok</option>
+              <option data-offset="43200" value="Auckland" >(GMT+12:00) Auckland</option>
+              <option data-offset="43200" value="Fiji" >(GMT+12:00) Fiji</option>
+              <option data-offset="43200" value="Kamchatka" >(GMT+12:00) Kamchatka</option>
+              <option data-offset="43200" value="Magadan" >(GMT+12:00) Magadan</option>
+              <option data-offset="43200" value="Marshall Is." >(GMT+12:00) Marshall Is.</option>
+              <option data-offset="43200" value="Wellington" >(GMT+12:00) Wellington</option>
+              <option data-offset="46800" value="Nuku&#39;alofa" >(GMT+13:00) Nuku&#39;alofa</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <hr>
+
+      <fieldset class="control-group">
+        <label for="user_geo_enabled" class="control-label">Ubicación del Tweet</label>
+        <div class="controls">
+          <label class="checkbox">
+            <input  id="user_geo_enabled" name="user[geo_enabled]" type="checkbox" value="1">Añade una ubicación a mis Tweets
+          </label>
+          <input type="hidden" value="0" name="user[geo_enabled]">
+          <p>Cuando publicas un Tweet con una ubicación, Twitter almacena esa ubicación. Puedes activar o desactivar esta opción en cada Tweet. <a href="https://support.twitter.com/articles/78525" target="_blank">Más</a></p>
+          <div id="delete_geo_data">
+            <p><a class="delete-info btn" id="geo_button" href="#">Borrar toda la información de ubicación</a></p>
+            <p id="delete_geo_info">Esto borrará toda la información de ubicación de Tweets pasados. Esto puede tomar hasta 30 minutos.</p>
+            <p id="deleting_geo_data" style="display: none;">Eliminando toda la información de ubicación de tus Tweets anteriores... Esto puede tomar hasta 30 minutos. Puedes abandonar esta página.</p>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="control-group">
+        <label for="user_nsfw_view" class="control-label">Twittear multimedia</label>
+        <div class="controls">
+          <label class="checkbox">
+            <input  id="user_nsfw_view" name="user[nsfw_view]" type="checkbox" value="1"> Mostrar multimedia que pueda contener material sensible.
+          </label>
+          <input type="hidden" value="0" name="user[nsfw_view]">
+            <label class="checkbox">
+              <input  id="user_nsfw_user" name="user[nsfw_user]" type="checkbox" value="1"> Marca mi multimedia como material sensible.
+            </label>
+            <input type="hidden" value="0" name="user[nsfw_user]">
+          <p>Si publicas imágenes o vídeos que puedan contener contenido sensible, por favor, marca esta casilla para que la gente esté advertida antes de verlo. <a href="https://support.twitter.com/articles/20169200" target="_blank">Más información</a>.</p>
+        </div>
+      </fieldset>
+
+      <fieldset id="user_protected_fieldset" class="control-group">
+       
+        
+        
+        <label for="user_protected" class="control-label">Privacidad de los Tweets</label>
+        <div class="controls">
+          <label class="checkbox">
+            <input  id="user_protected" name="user[protected]" type="checkbox" value="1"> Proteger mis Tweets
+          </label>
+          <input type="hidden" value="0" name="user[protected]">
+            <p>Si eliges esta opción, solo los usuarios que apruebes podrán ver tus Tweets. Los Tweets que escribas en el futuro no estarán disponibles públicamente. Los Tweets escritos anteriormente podrían estar aún visibles públicamente en algunos sitios. <a href="https://support.twitter.com/articles/14016" target="_blank">Más información</a>.</p>
+        </div>
+      </fieldset>
+
+        <fieldset class="control-group">
+          <label class="control-label ">Personalización</label>
+          <div class="controls">
+
+              <label class="checkbox">
+                <input checked id="use_cookie_personalization" name="user[use_cookie_personalization]" type="checkbox" value="1">
+                Personalizar Twitter con base en mis visitas recientes a sitios web
+                <input type="hidden" value="0" name="user[use_cookie_personalization]">
+                <input type="hidden" name="asked_cookie_personalization_setting" value="1">
+              </label>
+              <p><a class="personalization-preview-link" href="/#!/who_to_follow/web_personalized" target="_blank">Previsualiza</a> las sugerencias personalizadas para tí (no está disponible actualmente para todos los usuarios). <a class="personalization-support-link" href="https://support.twitter.com/articles/20169421" target="_blank">Aprende más</a>  sobre esta función y tus controles adicionales de privacidad.</p>
+
+
+          </div>
+        </fieldset>
+
+      <fieldset class="control-group">
+        <label for="user_ssl_only" class="control-label">Solo HTTPS</label>
+        <div class="controls">
+          <label class="checkbox">
+            <input id="user_ssl_only" name="user[ssl_only]" type="checkbox" value="1" checked>Usar siempre HTTPS
+          </label>
+          <input name="user[ssl_only]" type="hidden" value="0">
+          <p>Utiliza una conexión segura donde sea posible.</p>
+        </div>
+      </fieldset>
+
+      <fieldset class="control-group">
+        <label for="user_no_username_only_password_reset" class="control-label">Restablecer contraseña</label>
+        <div class="controls">
+          <div class="control-list">
+            <label class="checkbox">
+              <input id="user_no_username_only_password_reset" name="user[no_username_only_password_reset]" type="checkbox" value="1" >Requerir información personal para recuperar mi contraseña
+            </label>
+            <input name="user[no_username_only_password_reset]" type="hidden" value="0">
+          </div>
+          <p>De forma predeterminada, puedes iniciar un restablecimiento de contraseña con sólo ingresar tu @nombre de usuario. Si marcas esta casilla, se te pedirá que introduzcas tu dirección de correo electrónico o número de teléfono al intentar recuperar tu contraseña.</p>
+        </div>
+      </fieldset>
+      <hr>
+
+
+        <fieldset class="control-group">
+          <label for="user_country" class="control-label">País</label>
+          <div class="controls">
+            <select id="user_country" name="user[country]">
+                <option value="xx" >Globales</option>
+                <option value="af" >Afganistán</option>
+                <option value="de" >Alemania</option>
+                <option value="dz" >Algeria</option>
+                <option value="sa" >Arabia Saudita</option>
+                <option value="ar" >Argentina</option>
+                <option value="au" >Australia</option>
+                <option value="bd" >Bangladés</option>
+                <option value="br" >Brasil</option>
+                <option value="cm" >Camerún</option>
+                <option value="ca" >Canadá</option>
+                <option value="co" >Colombia</option>
+                <option value="dk" >Dinamarca</option>
+                <option value="eg" >Egipto</option>
+                <option value="es" >España</option>
+                <option value="us" >Estados Unidos</option>
+                <option value="et" >Ethiopia</option>
+                <option value="ph" >Filipinas</option>
+                <option value="fr" >Francia</option>
+                <option value="gh" >Ghana</option>
+                <option value="gr" >Grecia</option>
+                <option value="nl" >Holanda</option>
+                <option value="in" >India</option>
+                <option value="id" >Indonesia</option>
+                <option value="iq" >Irak</option>
+                <option value="ie" >Irlanda</option>
+                <option value="il" >Israel</option>
+                <option value="it" >Italia</option>
+                <option value="jp" >Japón</option>
+                <option value="ke" >Kenia</option>
+                <option value="mg" >Madagascar</option>
+                <option value="my" >Malasia</option>
+                <option value="ma" >Morocco</option>
+                <option value="mz" >Mozambique</option>
+                <option value="mx" >México</option>
+                <option value="np" >Nepal</option>
+                <option value="ni" >Nigeria</option>
+                <option value="nz" >Nueva Zelandia</option>
+                <option value="pk" >Pakistán</option>
+                <option value="pe" selected>Perú</option>
+                <option value="pl" >Polonia</option>
+                <option value="gb" >Reino Unido</option>
+                <option value="kr" >Republic of Korea</option>
+                <option value="ro" >Rumania</option>
+                <option value="ru" >Rusia</option>
+                <option value="sg" >Singapur</option>
+                <option value="lk" >Sri Lanka</option>
+                <option value="za" >Sudáfrica</option>
+                <option value="se" >Suecia</option>
+                <option value="ch" >Suiza</option>
+                <option value="th" >Tailandia</option>
+                <option value="tw" >Taiwan</option>
+                <option value="tz" >Tanzania</option>
+                <option value="tr" >Turquía</option>
+                <option value="ua" >Ucrania</option>
+                <option value="ug" >Uganda</option>
+                <option value="uz" >Uzbekistán</option>
+                <option value="ve" >Venezuela</option>
+                <option value="vn" >Vietnam</option>
+                <option value="ye" >Yemen</option>
+                          </select>
+            <p>Selecciona tu país. Esta configuración será guardada en este navegador.</p>
+          </div>
+        </fieldset>
+        <hr>
+
+      <div class="form-actions">
+        <button id="settings_save" class="btn btn-primary" type="submit">Guardar cambios</button>
+      </div>      
+
+      <hr>
+
+      <fieldset class="control-group">
+        <div class="form-actions">
+          <p><a class="btn btn-danger" id="account_deactivate_link" href="/settings/accounts/confirm_deactivation">Desactivar mi cuenta</a></p>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+          </div>
+        </div>
+      <script>
+        if(window.ttft){window.ttft.recordMilestone('page','settings');
+        window.ttft.recordMilestone('client_record_time',new Date().getTime())}
+      </script>
+<hr>
+
+<a href="javascript:void(0)" onclick="saluda()">Probando el javascript pincha aqui</a>
+
+
